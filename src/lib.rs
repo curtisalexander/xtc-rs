@@ -40,7 +40,7 @@ pub fn run(args: Args) -> Result<(), Box<dyn Error>> {
     println!("Converting sheet {} within the xlsx file {}", sheet_name, xlsx_file.to_str().unwrap());
 
     let csv_file = xlsx_file.with_extension("csv");
-    println!("Creating the csv file{}", csv_file.to_str().unwrap());
+    println!("Creating the csv file {}", csv_file.to_str().unwrap());
 
     let mut wtr = csv::WriterBuilder::new()
         .quote_style(csv::QuoteStyle::Always)
