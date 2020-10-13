@@ -2,6 +2,26 @@
 **(x)lsx (t)o (c)sv** &rarr; convert xlsx file to a csv file using Rust
 
 
+## Usage
+
+```
+xtc 0.2.0
+(x)lsx (t)o (c)sv => convert xlsx file to a csv file
+
+USAGE:
+    xtc [FLAGS] [OPTIONS] --xlsx <xlsx>
+
+FLAGS:
+    -h, --help            Prints help information
+    -p, --print-sheets    Print out sheet names
+    -V, --version         Prints version information
+
+OPTIONS:
+    -s, --sheet <sheet>    Sheet name
+    -x, --xlsx <xlsx>      Path to xlsx file
+```
+
+
 ### [Standing on the Shoulders](https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants)
 Code is simply a wrapper around the [calamine](https://github.com/tafia/calamine) library.  In fact, initial implementation copies their [xlsx to csv example](https://github.com/tafia/calamine/blob/master/examples/excel_to_csv.rs).
 
