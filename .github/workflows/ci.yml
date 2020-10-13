@@ -16,7 +16,7 @@ jobs:
         steps:
             - name: Get git tag version
               id: get_version
-              run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags//}
+              run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
             - name: Checkout
               uses: actions/checkout@v2
             - name: Install toolchain
@@ -72,7 +72,7 @@ jobs:
         steps:
             - name: Get git tag version
               id: get_version
-              run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags//}
+              run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
             - name: Checkout
               uses: actions/checkout@v2
             - name: Install toolchain
