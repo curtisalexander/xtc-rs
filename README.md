@@ -29,9 +29,16 @@ In addition, copied methodology within [xlsx-to-csv.rs](https://github.com/zitse
 
 
 ### Github Actions
-Only the presence of a `git tag` will trigger a Github Actions build
+Only the presence of a `git tag` will trigger a Github Actions build.
 
-Below is the rought `git tag` dance
+```yml
+on:
+  push:
+    tags:
+      - '*'
+```
+
+Below is the rough `git tag` dance to delete and/or add tags to trigger Github Actions.
 
 ```sh
 # delete local tag
