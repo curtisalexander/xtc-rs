@@ -1,7 +1,11 @@
 # xtc-rs
-Excel to csv in Rust
+**(x)lsx (t)o (c)sv** &rarr; convert xlsx file to a csv file using Rust
 
+
+### [Standing on the Shoulders](https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants)
 Code is simply a wrapper around the [calamine](https://github.com/tafia/calamine) library.  In fact, initial implementation copies their [xlsx to csv example](https://github.com/tafia/calamine/blob/master/examples/excel_to_csv.rs).
+
+In addition, copied methodology within [xlsx-to-csv.rs](https://github.com/zitsen/xlsx2csv.rs/blob/master/src/main.rs) for writing to `csv`.
 
 
 ### Github Actions
