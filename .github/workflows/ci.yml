@@ -58,6 +58,9 @@ jobs:
                 override: true
             - name: Build
               run: cargo build --release --target ${{ env.target }}
+            - name: Where is everything
+              run: gci target
+              shell: powershell
             - name: Zip
               run: Compress-Archive -Path target\release\${{ env.PACKAGE_NAME }}.exe -DestinationPath target\release\${{ env.PACKAGE_NAME }}-${{ steps.get_version.outputs.VERSION }}-${{ env.target }}.zip  -CompressionLevel Optimal
               shell: powershell
