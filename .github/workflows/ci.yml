@@ -29,9 +29,9 @@ jobs:
             - name: Build
               run: cargo build --release && strip target/release/${{ env.PACKAGE_NAME }}
             - name: What is in release
-              run: ls -l target\release
+              run: ls -l target/release
             - name: What is in target
-              run: ls -l target\${{ env.target }}
+              run: ls -l target/${{ env.target }}
             - name: Zip
               run: tar czvf target/release/${{ env.PACKAGE_NAME }}-${{ steps.get_version.outputs.VERSION }}-${{ env.target }}.tar.gz target/release/${{ env.PACKAGE_NAME }}
             - name: Release
@@ -66,7 +66,7 @@ jobs:
               run: gci target\release
               shell: powershell
             - name: What is in target
-              run: gci target\${{ env.target }}
+              run: gci target\${{ env.target }}\release
               shell: powershell
             - name: Zip
               run: Compress-Archive -Path target\release\${{ env.PACKAGE_NAME }}.exe -DestinationPath target\release\${{ env.PACKAGE_NAME }}-${{ steps.get_version.outputs.VERSION }}-${{ env.target }}.zip  -CompressionLevel Optimal
@@ -104,9 +104,9 @@ jobs:
             - name: Build
               run: cargo build --release && strip target/release/${{ env.PACKAGE_NAME }}
             - name: What is in release
-              run: ls -l target\release
+              run: ls -l target/release
             - name: What is in target
-              run: ls -l target\${{ env.target }}
+              run: ls -l target/${{ env.target }}
             - name: Zip
               run: tar czvf target/release/${{ env.PACKAGE_NAME }}-${{ steps.get_version.outputs.VERSION }}-${{ env.target }}.tar.gz target/release/${{ env.PACKAGE_NAME }}
             - name: Release
