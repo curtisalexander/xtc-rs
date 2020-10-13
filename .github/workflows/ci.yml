@@ -59,7 +59,7 @@ jobs:
             - name: Build
               run: cargo build --release --target ${{ env.target }}
             - name: Zip
-              run: Compress-Archive -Path target/release/${{ env.PACKAGE_NAME }}.exe -DestinationPath target/release/${{ env.PACKAGE_NAME }}-${{ steps.get_version.outputs.VERSION }}-${{ env.target }}.zip  -CompressionLevel Optimal
+              run: Compress-Archive -Path target\release\${{ env.PACKAGE_NAME }}.exe -DestinationPath target\release\${{ env.PACKAGE_NAME }}-${{ steps.get_version.outputs.VERSION }}-${{ env.target }}.zip  -CompressionLevel Optimal
               shell: powershell
             - name: Build
               uses: actions-rs/cargo@v1
